@@ -1,5 +1,5 @@
 # Build stage
-FROM node:20-alpine@sha256:c13b26e7e602ef2f1074aef304ce6e9b7dd284c419b35d89fcf3cc8e44a8def9 AS build
+FROM node:22-alpine@sha256:bd26af08779f746650d95a2e4d653b0fd3c8030c44284b6b98d701c9b5eb66b9 AS build
 # Install pnpm
 RUN npm install -g pnpm
 # Set working directory
@@ -14,7 +14,7 @@ COPY . .
 RUN pnpm run build
 
 # Runtime stage
-FROM node:20-alpine@sha256:c13b26e7e602ef2f1074aef304ce6e9b7dd284c419b35d89fcf3cc8e44a8def9 AS runtime
+FROM node:22-alpine@sha256:bd26af08779f746650d95a2e4d653b0fd3c8030c44284b6b98d701c9b5eb66b9 AS runtime
 # Install pnpm
 RUN npm install -g pnpm
 # Set working directory

@@ -16,7 +16,7 @@ jobs:
       - name: Use Node.js 20
         uses: actions/setup-node@1e60f620b9541d16bece96c5465dc8ee9832be0b # v4
         with:
-          node-version: 20
+          node-version: 22
       - name: Create CRA from template
         run: npx create-react-app my-app --template file:../cra-template-quentinvdr .
       - name: 📦 Install Dependencies
